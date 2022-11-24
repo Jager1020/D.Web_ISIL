@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+
+/* Declaracion de variables */
+:root {
+    /* variables para la paleta de colores */
+    --color-blanco: white; 
+    --color-naranja: #F9B244; 
+    --color-grisoscuro: #222222;
+    --color-grisclaro: #eaeaea;
+
+    /* Variable para tipo de letra */
+    --fuente-principal:'Raleway', sans-serif ;
+    --duente-titulos: 
+    
+}
+
+
+* { /*Quita los margenes y padding por defecto del html*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-blanco); /* Color de fondo */
+    font-family: var(--fuente-principal); /* Tipo de fuente */
+}
+
+h2 {
+    padding-bottom: 35px; /* Espacion hacia abjo */
+    font-weight: 400; /* Grosor de la fuente */
+    font-size: 2.0rem; /* Tamaño de la fuente */
+}
+
+h3 {
+    padding-bottom: 20px; /* Espacion hacia abjo */
+}
+
+h5 {
+    padding-top: 20px; /* Espacio para arriba */
+    padding-bottom: 20px; /* Espacion hacia abjo */
+    font-size: 1rem; /* Tamaño de la fuente */
+}
+
+p {
+    font-weight: 300; /* Grosor de la fuente */
+    font-size: 0.9rem; /* Tamaño de la fuente */
+}
+
+#barra {
+    padding-top: 15px; /* Espacio para arriba */
+    padding-bottom: 15px; /* Espacion hacia abjo */
+    background-color:var(--color-naranja); /* Color de fondo */
+    color: var(--color-blanco);
+}
+
+#barra .barra-padre {
+    margin-left: 500px;
+    margin-right: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#barra .barra-hijo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.barra-hijo li {
+    padding-left: 10px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#barra2 {
+    padding-top: 15px; /* Espacio para arriba */
+    padding-bottom: 15px; /* Espacion hacia abjo */
+    background-color:var(--color-grisoscuro); /* Color de fondo */
+    text-align: center; /*Centra los elementos*/
+    color: var(--color-blanco);
+}
+
+#cabecera {
+    padding-top: 18px; /* Espacio para arriba */
+    padding-bottom: 18px; /* Espacion hacia abjo */
+    color: var(--color-blanco); /* Color del texto */
+    background-color: var(--color-grisoscuro); /* Color de fondo */
+}
+
+#cabecera .row {
+    justify-content: space-between; /*Coloca los elemnetos en ambos extremos*/
+}
+
+#cabecera a {
+    text-decoration: none; /*Quita el subrayado*/
+    color: var(--color-blanco);/*Le da color blanco a los iconos*/
+}
+
+#cabecera .logo {
+    background-color: var(--color-blanco);
+    border: 3px solid var(--color-naranja);
+    padding: 10px;
+}
+
+#cabecera .caja-blanca {
+    background-color: var(--color-blanco);
+    padding: 10px;
+}
+
+#cabecera .titulo {
+    margin-top: -14px;
+    margin-bottom: -14px;
+}
+
+#presentacion {
+    background-image: url(../imagenes/fondo1.png);
+    background-size: cover ; /* Se ajuste ancho y largo */
+    background-attachment: fixed; /* Imagen fija en la pagina */
+    
+}
+  
+#presentacion img {
+    border-radius: 200px; /* Imagenes redondas */
+}
+
+#beneficios {
+    text-align: center; /*Coloca en texto en el centro*/
+    background-color:var(--color-grisclaro) /* Color de fondo */
+}
+
+
+#categorias {
+    text-align: center; /*Centar texto*/
+}
+
+#categorias p {
+    background-color:var(--color-grisclaro) ; /* Color de fondo */
+    padding-top: 15px; /* Color de fondo */
+    padding-bottom: 15px; /* Espacion hacia abjo */
+    transition: all 0.5s ;
+}
+
+#categorias p:hover {
+    filter: grayscale(100%);
+    transform: translateY(-10px);
+}
+
+#principales {
+    background-image: url(../imagenes/fondo2.5.jpg);
+    text-align: center;
+}
+
+#principales h3 {
+    background-color: var(--color-blanco); /* Color de fondo */
+    padding-top: 15px;
+}
+
+#principales img {
+    transition: all 0.5s ;
+}
+
+#principales img:hover {
+    filter: grayscale(100%);
+    transform: translateY(-20px);
+}
+
+#trending {
+    text-align: center;
+}
+
+#trending img {
+    transition: all 0.5s ease-in-out;
+}
+
+#trending img:hover {
+    transform: scale(135%);
+}
+
+
+#gallery {
+    text-align: center;
+    background-color: var(--color-grisclaro); /* Color de fondo */
+}
+
+#gallery img {
+    border-radius: 200px; /* Imagenes redondas */
+}
+
+.espacio-50 {
+    padding-bottom: 100px;
+}
+
+#from {
+    text-align: center;
+}
+
+#from img {
+    transition: all 1.0s ease-in-out;
+}
+
+#from img:hover {
+    filter: opacity(60%);
+    transform: scale(150%);
+}
+
+#info {
+    background-color: var(--color-grisclaro); /* Color de fondo */
+}
+
+#info p {
+    padding-bottom: 6px; /* Espacion hacia abjo */
+}
+
+#info a {
+    text-decoration: none;
+    font-size: 30px;
+    color: var(--color-grisoscuro);
+}
+
+#barra-ubicacion {
+    background-color: var(--color-naranja); /* fondo del section */
+    color: var(--color-grisclaro); /* color de texto */
+    text-align: center ; /* centrar el texto */
+}
+
+.espaciado{
+    padding-top: 70px; /* Espacio para arriba */
+    padding-bottom: 70px; /* Espacion hacia abjo */
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.fondo {
+    background-color: var(--color-grisclaro); /* Color de fondo */
+}
+
+.row {
+    display: flex; /* Activa el felxbox*/
+    flex-direction: row; /*Coloca los lementso uno al costado del otro*/
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    flex-basis: 0px; /*Quita el ancho de la columna*/
+    flex-grow: 1;/*Hace que la columna crezca proporcionalmente*/
+
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    /* background-color:#eaeaea */
+}
+
+.img_ajustarancho { /*Para que las imagenes se acomoden al espacio*/
+    width: 100%;
+    height: auto;
+}
+
+.fondo1 {
+    margin: 120px;
+}
+
+.espacio-footer{
+    margin-bottom: 20px;
+}
+
+.caja-overflow {
+    overflow: hidden;
+}
+
+
+/* Estilos de Nvar */
+
+.logo {
+    width: 120px;
+}
+
+.menu-barra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-opciones{
+    list-style-type: none;
+}
+
+.menu-opciones a{
+    text-decoration: none;
+    color: var(--color-azul);
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-items li {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    border-bottom: transparent 3px solid;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-items li:hover {
+    border-bottom: var(--color-azul) 3px solid;
+}
