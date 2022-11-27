@@ -20,6 +20,11 @@
     padding: 0;
 }
 
+html {
+    /* Permite suavizar el efecto del desplazamiento vertical en la página */
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--color-blanco); /* Color de fondo */
     font-family: var(--fuente-principal); /* Tipo de fuente */
@@ -87,15 +92,9 @@ p {
     padding-bottom: 18px; /* Espacion hacia abjo */
     color: var(--color-blanco); /* Color del texto */
     background-color: var(--color-grisoscuro); /* Color de fondo */
-}
 
-#cabecera .row {
-    justify-content: space-between; /*Coloca los elemnetos en ambos extremos*/
-}
-
-#cabecera a {
-    text-decoration: none; /*Quita el subrayado*/
-    color: var(--color-blanco);/*Le da color blanco a los iconos*/
+    /* Posicionamiento pegajoso */
+    position: sticky;
 }
 
 #cabecera .logo {
@@ -224,6 +223,41 @@ p {
     color: var(--color-grisclaro); /* color de texto */
     text-align: center ; /* centrar el texto */
 }
+
+#scroll-arriba {
+    /* Tamaño del botón */
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+
+    /* Color del botón */
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+
+    /* Alineación, bordes y tamaño de fuente */
+    font-size: 16px;
+    text-align: center;
+    border: solid 2px var(--color-blanco);
+    border-radius: 50%;
+
+    /* Posicionamiento fijo */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    /* Transicion */
+    transition: all 0.5s ease-in-out;
+}
+
+#scroll-arriba:hover {
+    background-color: var(--color-naranja);
+    color: var(--color-grisoscuro);
+    border: solid 2px var(--color-grisoscuro);
+    transform: translateY(-5px);
+    box-shadow: -3px 8px 25px 0px rgba(24, 41, 64, 40%);
+}
+
+/*Clases*/
 
 .espaciado{
     padding-top: 70px; /* Espacio para arriba */
