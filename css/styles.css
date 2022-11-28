@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&family=Montserrat:wght@300;400&family=Nunito+Sans:wght@300;400&display=swap');
 
 /* Declaracion de variables */
 :root {
@@ -6,11 +6,12 @@
     --color-blanco: white; 
     --color-naranja: #F9B244; 
     --color-grisoscuro: #222222;
-    --color-grisclaro: #eaeaea;
+    --color-grisletras: #505050;
+    --color-grisclaro: #F7F7F7;
 
     /* Variable para tipo de letra */
     --fuente-principal:'Raleway', sans-serif ;
-    --duente-titulos: 
+    --fuente-parrafos:'Nunito Sans', sans-serif;
     
 }
 
@@ -30,10 +31,32 @@ body {
     font-family: var(--fuente-principal); /* Tipo de fuente */
 }
 
+h1 {
+    font-weight:600;
+    font-size: 36px;
+    padding-bottom: 35px;
+}
+
 h2 {
     padding-bottom: 35px; /* Espacion hacia abjo */
     font-weight: 400; /* Grosor de la fuente */
     font-size: 2.0rem; /* Tamaño de la fuente */
+    position: relative;
+}
+
+h2::after {
+    content: "";
+
+    /* Posicion de la barra */
+    position: absolute;
+    /* left: 0px; */
+    left: calc(50% - 50px);
+
+    bottom: 15px;
+
+    width: 100px; /* Ancho de la barra */
+    height: 2px; /* Grosor de la barra */
+    background-color: var(--color-grisoscuro);
 }
 
 h3 {
@@ -47,8 +70,11 @@ h5 {
 }
 
 p {
-    font-weight: 300; /* Grosor de la fuente */
-    font-size: 0.9rem; /* Tamaño de la fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-family: var(--fuente-parrafos);
+    line-height: 26px;
+    color: var(--color-grisletras);
 }
 
 #barra {
@@ -95,6 +121,12 @@ p {
 
     /* Posicionamiento pegajoso */
     position: sticky;
+
+    /* Coordenada */
+    top: 0px;
+
+    /* Poner la caja de la cabecera por encima de todas */
+    z-index: 1000;
 }
 
 #cabecera .logo {
@@ -188,7 +220,7 @@ p {
 }
 
 .espacio-50 {
-    padding-bottom: 100px;
+    padding-bottom: 30px;
 }
 
 #from {
@@ -206,16 +238,6 @@ p {
 
 #info {
     background-color: var(--color-grisclaro); /* Color de fondo */
-}
-
-#info p {
-    padding-bottom: 6px; /* Espacion hacia abjo */
-}
-
-#info a {
-    text-decoration: none;
-    font-size: 30px;
-    color: var(--color-grisoscuro);
 }
 
 #barra-ubicacion {
@@ -301,10 +323,6 @@ p {
     margin: 120px;
 }
 
-.espacio-footer{
-    margin-bottom: 20px;
-}
-
 .caja-overflow {
     overflow: hidden;
 }
@@ -347,4 +365,32 @@ p {
 
 .menu-items li:hover {
     border-bottom: var(--color-azul) 3px solid;
+}
+
+/*Estilos de Footer*/
+
+#info .contenido-pie {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#info .contenido {
+    flex-basis: 0px; /*Quita el ancho de la columna*/
+    flex-grow: 1;/*Hace que la columna crezca proporcionalmente*/
+}
+
+#info a {
+    text-decoration: none;
+    color: var(--color-grisoscuro);
+    font-size: 30px;
+}
+
+#info p {
+    padding: 10px;
+}
+
+#info span {
+    color: var(--color-naranja);
+    font-weight: 600;
 }
