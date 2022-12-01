@@ -42,6 +42,7 @@ h2 {
     font-weight: 400; /* Grosor de la fuente */
     font-size: 2.0rem; /* Tamaño de la fuente */
     position: relative;
+    text-align: center;
 }
 
 h2::after {
@@ -75,6 +76,15 @@ p {
     font-family: var(--fuente-parrafos);
     line-height: 26px;
     color: var(--color-grisletras);
+}
+
+img {
+    display: block; /* elimina el margen automaticamente del borde inferior */
+
+}
+
+video {
+    display: block; /* elimina el margen automaticamente del borde inferior */
 }
 
 #barra {
@@ -327,6 +337,28 @@ p {
     overflow: hidden;
 }
 
+.extension-video {
+    position: relative;
+}
+
+.extension-video-descripcion {
+    position: absolute;
+
+    width: 20%;
+    color: var(--color-azul);
+    text-align: center;
+
+    /* Coordenadas de posicionamiento */
+    top: 10%;
+    left: 5%;
+}
+
+.video-responsive {
+    /* Relación-Aspecto: 16/9, 4/3, 21/9  */
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+}
 
 /* Estilos de Nvar */
 
